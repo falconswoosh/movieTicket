@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
+  </head>
+  <body>
+  <div class="page">
+  </div>
+    <div class="container">
+      <form>
+        <h1>Select a movie to watch</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="movie" class="form-group">
+              <label class="control-label" for="Movie">Choose a movie: </label>
+              <select class="form-control" name="movie">
+                <option value="">Choose one</option>
+                <option value="Pirates of the Carribean">Pirates of the Caribbean</option>
+                <option value="Heat">Heat</option>
+                <option value="Journey to Mars">Journey to Mars</option>
+                <option value="Bourne Series">Bourne Series</option>
+                <option value="The Story of Disney">The Story of Disney</option>
+                <option value="Silicon Forest Cowboys">Silicon Forest Cowboys</option>
+              </select>
+              <span class="help-block">Please select a movie title</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="quantity" class="form-group">
+              <label class="control-label">Qty:</label>
+              <input class="form-control" type="text" value="1">
+              <span class="help-block">Please a quantity less than 301 due to max theater seating capacity.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div id="date" class="form-group">
+              <label class="control-label" for="date">Select Date</label>
+              <input type="date" class="form-control" name="dateTime">
+              <span class="help-block">Please enter or select a date you wish to purchase movie tickets.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="time" class="form-group">
+              <label class="control-label">Select a time</label>
+              <select class="form-control" name="time">
+                <option value="">Choose one</option>
+                <option value="10">10:00am-12:00pm</option>
+                <option value="12">12:00pm-2:00pm</option>
+                <option value="14">2:00pm-4:00pm</option>
+                <option value="16">4:00pm-6:00pm</option>
+                <option value="18">6:00pm-8:00pm</option>
+                <option value="20">8:00pm-10:00pm</option>
+                <option value="22">10:00pm-12:00am</option>
+              </select>
+              <span class="help-block">Please select the time for your movie.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div id="age" class="form-group">
+              <label class="control-label">Enter your age:</label>
+              <input class="form-control" type="text">
+              <span class="help-block">Please enter an age for possible discounts.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-info" name="button">Submit</button>
+        </div>
+        <p id="error-message">Some information is not valid!</p>
+      </form>
+
+      <div id="ticket-confirmation">
+        <h2>Confirmation of your purchase: </h2>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 id="output-title"></h3>
+          </div>
+          <div class="panel-body">
+            <table>
+              <tr>
+                <td><b>Qty:</b></td>
+                <td id="output-quantity"></td>
+              </tr>
+              <tr>
+                <td><b>Showing Date:</b></td>
+                <td id="output-date"></td>
+              </tr>
+              <tr>
+                <td><b>Showing Time:</b></td>
+                <td id="output-time"></td>
+              </tr>
+              <tr>
+                <td><b>Total Cost:</b></td>
+                <td id="output-cost"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
